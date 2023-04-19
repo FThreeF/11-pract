@@ -3,7 +3,8 @@ import './App.css';
 
 const App = () => {
   const [request, setRequest] = useState('');
-  const getResponce = () => setRequest(eval(request));
+  const [responce, setResponce] = useState('');
+  const getResponce = () => setResponce(eval(request));
 
   return (
     <div className='app'>
@@ -18,6 +19,9 @@ const App = () => {
         <button onClick={getResponce} className='button'>
           =
         </button>
+      </div>
+      <div>
+        {`Ответ ${responce}`}
       </div>
     </div>
   );
